@@ -1,0 +1,23 @@
+instalar node js
+
+luego
+en el cmd
+npm install -g @angular/cli
+ng
+cd DESKTOP
+ng new my-dream-app
+cd my-dream-app
+ng serve
+
+
+echo "# ANGULAR" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/WernerOvalle/ANGULAR.git
+git push -u origin master
+
+git remote add origin <new_github_repository_url>
+git add .
+git commit -m "initial commit"
+git push -u origin master
