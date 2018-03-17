@@ -25,7 +25,12 @@ export class ProductService {
       tipo: product.tipo,
       marca: product.marca,
       serie: product.serie,
-      tenencia: product.tenencia
+      tenencia: product.tenencia,
+      portacion: product. portacion,
+      puesto:product.puesto,
+      usuario: product.usuario,
+      estatus: product.estatus,
+      descripcion: product.descripcion
     });
   }
 
@@ -35,7 +40,12 @@ export class ProductService {
       tipo: product.tipo,
       marca: product.marca,
       serie: product.serie,
-      tenencia: product.tenencia
+      tenencia: product.tenencia,
+      portacion: product. portacion,
+      puesto:product.puesto,
+      usuario: product.usuario,
+      estatus: product.estatus,
+      descripcion: product.descripcion
     });
   }
 

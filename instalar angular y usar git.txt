@@ -9,6 +9,7 @@ ng new my-dream-app
 cd my-dream-app
 ng serve
 
+npm install firebase angularfire2
 
 echo "# ANGULAR" >> README.md
 git init
