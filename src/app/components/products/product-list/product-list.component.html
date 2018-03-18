@@ -1,19 +1,26 @@
-<div class="card mt-5">
+
+  
   <div class="card-body">
-    
-    <td><h6>Tipo </h6></td>
-    <td><h6>Marca </h6></td>
-    <td><h6>Serie </h6></td>
-    <td><h6>Tenencia </h6></td>
-    <td><h6>Portacion </h6></td>
-    <td><h6>Puesto </h6></td>
-    <td><h6>Usuario </h6></td>
-    <td><h6>Eestatus </h6></td>
-    <td><h6>Descripicon </h6></td>
-    <table class="table table-sm table-hover">
-      <tbody>
-        <tr *ngFor="let product of productList">
-           
+      
+     
+      <table class="table table-striped ">
+        <thead class="thead-dark">
+      
+        <tr>
+            <th><h6> Tipo </h6></th>
+            <th><h6> Marca </h6></th>
+            <th><h6> Serie </h6></th>
+            <th><h6> Tenencia </h6></th>
+            <th><h6> Portacion </h6></th>
+            <th><h6> Puesto </h6></th>
+            <th><h6> Usuario </h6></th>
+            <th><h6> Estatus </h6></th>
+            <th><h6> Descripcion </h6></th>
+            <th><h6> Editar </h6></th>
+            <th><h6> Eliminar </h6></th>
+            </tr>  </thead>
+            <tbody>
+            <tr *ngFor="let product of productList">
           <td>{{product.tipo}}</td>
           <td>{{product.marca}}</td>
           <td>{{product.serie}}</td>
@@ -22,11 +29,12 @@
           <td>{{product.puesto}}</td>
           <td>{{product.usuario}}</td>
           <td>{{product.estatus}}</td>
-          <td>{{product.descripicon}}</td>
+          <td>{{product.descripcion}}</td>
           <td>
             <a class="btn btn-secondary text-white" (click)="onEdit(product)">
                 <i class="far fa-edit"></i>
-            </a>
+            </a></td>
+          <td>
             <a class="btn btn-danger text-white" (click)="onDelete(product.$key)">
                 <i class="fas fa-trash-alt"></i>
             </a>
@@ -35,4 +43,3 @@
       </tbody>
     </table>
   </div>
-</div>
