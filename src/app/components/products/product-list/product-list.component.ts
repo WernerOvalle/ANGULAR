@@ -36,12 +36,13 @@ export class ProductListComponent implements OnInit {
 
   onEdit(product: Product) {
     this.productService.selectedProduct = Object.assign({}, product);
+    this.toastr.warning('Operacion Completa', 'Datos Actualizados');
   }
 
   onDelete($key: string) {
-    if(confirm('Are you sure you want to delete it?')) {
+    if(confirm('Seguro que desea eliminar esto?')) {
       this.productService.deleteProduct($key);
-      this.toastr.warning('Deleted Successfully', 'Product Removed');
+      this.toastr.error('Operacion Completa', 'Datos Eliminados');
     }
   }
 

@@ -35,7 +35,7 @@ export class ProductComponent implements OnInit {
     this.productService.updateProduct(productForm.value);
     
     this.resetForm(productForm);
-    this.toastr.success('Sucessful Operation', 'Product Registered');
+    this.toastr.success('Operación Completa', 'Arma Registrada');
   }
 
   resetForm(productForm?: NgForm)
@@ -43,6 +43,7 @@ export class ProductComponent implements OnInit {
     if(productForm != null)
       productForm.reset();
       this.productService.selectedProduct = new Product();
+     
   }
 
 }

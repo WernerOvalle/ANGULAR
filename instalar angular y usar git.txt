@@ -9,9 +9,20 @@ ng new my-dream-app
 cd my-dream-app
 ng serve
 
-npm install firebase angularfire2
+ng g c components/products/product
+ng g cl models/product
+ng g s services/product
 
-echo "# ANGULAR" >> README.md
+npm install ngx-toaster
+npm install --save font-awesome angular-font-awesome
+npm install @angular/router
+npm install firebase angularfire2
+ npm install --dev
+
+
+
+
+
 git init
 git add README.md
 git commit -m "first commit"

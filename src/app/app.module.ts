@@ -20,23 +20,46 @@ import { ProductService } from './services/product.service';
 // Toastr
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { LoginComponent } from './components/login/login.component';
+// router
+import { RouterModule } from '@angular/router';
+import { StartpageComponent } from './components/startpage/startpage.component';
+//auth
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
+import { AuthService } from './auth.service';
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     ProductComponent,
-    ProductListComponent
+    ProductListComponent,
+    LoginComponent,
+    StartpageComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot([
+      {
+        path: 'products',
+        component: ProductsComponent},{
+        path: 'login',
+       component:   LoginComponent, }
+       ,{
+        path: 'startpage',
+       component:   StartpageComponent,
+
+  }])
   ],
   providers: [
+    AuthService,
     ProductService
   ],
   bootstrap: [AppComponent]
